@@ -48,7 +48,7 @@
           {
             "name": "AllowRCEPortsFromLinkedinIPs",
             "properties": {
-              "description": "Allows SSH traffic",
+              "description": "Allows RCE traffic from Linkedin IPs",
               "protocol": "Tcp",
               "sourcePortRange": "*",
               "destinationPortRanges": [
@@ -68,7 +68,7 @@
                 "216.52.21.0/25"
                 "216.52.22.2/32",
                 "216.52.23.0/25",
-                "217.29.149.150/32",
+                "217.29.149.150",
                 "65.113.36.80/29",
                 "202.4.184.29",
                 "91.225.250.8",
