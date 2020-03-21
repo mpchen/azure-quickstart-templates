@@ -82,7 +82,7 @@
       "type": "Microsoft.Resources/deployments",
       "resourceGroup": "[parameters('virtualNetworkResourceGroupName')]",
       "dependsOn": [
-        "new-nsg"
+        "[concat(parameters('virtualNetworkName'),'-',parameters('subnetName'),'-','hsec-nsg')]"
       ],
       "properties": {
         "mode": "Incremental",
