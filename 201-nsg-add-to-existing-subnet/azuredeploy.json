@@ -40,7 +40,7 @@
   "resources": [
     {
       "type": "Microsoft.Network/networkSecurityGroups",
-      "name": "new-nsg",
+      "name": "[parameters('virtualNetworkName'),'-',parameters('subnetName'),'-','hsec-nsg']
       "location": "[resourceGroup().location]",
       "apiVersion": "2018-03-01",
       "properties": {
@@ -101,7 +101,7 @@
             "value": "[reference(resourceId(parameters('virtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName')), '2018-03-01').addressPrefix]"
           },
           "nsgId": {
-            "value": "[resourceId('Microsoft.Network/networkSecurityGroups', 'new-nsg')]"
+            "value": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('virtualNetworkName'),'-',parameters('subnetName'),'-','hsec-nsg')]"
           }
         }
       }
