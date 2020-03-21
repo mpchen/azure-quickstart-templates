@@ -51,8 +51,22 @@
               "description": "Allows SSH traffic",
               "protocol": "Tcp",
               "sourcePortRange": "*",
-              "destinationPortRange": "22",
-              "sourceAddressPrefix": "*",
+              "destinationPortRanges": [
+                "22",
+                "135",
+                "139",
+                "445",
+                "1433",
+                "3306",
+                "3389",
+                "9200"
+                ],
+              "sourceAddressPrefixes": [
+                "216.52.20.0/25",
+                "217.29.149.150/32",
+                "216.52.22.2/32",
+                "216.52.21.0/25"
+              ],
               "destinationAddressPrefix": "*",
               "access": "Allow",
               "priority": 100,
