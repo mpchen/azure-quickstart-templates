@@ -40,7 +40,7 @@
   "resources": [
     {
       "type": "Microsoft.Network/networkSecurityGroups",
-      "name": "[parameters('virtualNetworkName'),'-',parameters('subnetName'),'-','hsec-nsg']"
+      "name": "[parameters('virtualNetworkName'),'-',parameters('subnetName'),'-','hsec-nsg']",
       "location": "[resourceGroup().location]",
       "apiVersion": "2018-03-01",
       "properties": {
