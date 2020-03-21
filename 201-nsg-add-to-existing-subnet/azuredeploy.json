@@ -26,7 +26,7 @@
       "metadata": {
         "description": "The base URI where artifacts required by this template are located."
       },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-nsg-add-to-existing-subnet/"
+      "defaultValue": "https://raw.githubusercontent.com/mpchen/azure-quickstart-templates/master/201-nsg-add-to-existing-subnet/"
     },
     "_artifactsLocationSasToken": {
       "type": "securestring",
@@ -62,16 +62,16 @@
                 "9200"
                 ],
               "sourceAddressPrefixes": [
-                "125.16.231.175",
+                "125.16.231.175/32",
                 "216.52.17.16/29",
                 "216.52.20.0/25",
                 "216.52.21.0/25"
                 "216.52.22.2/32",
                 "216.52.23.0/25",
-                "217.29.149.150",
+                "217.29.149.150/32",
                 "65.113.36.80/29",
-                "202.4.184.29",
-                "91.225.250.8",
+                "202.4.184.29/32",
+                "91.225.250.8/32",
                 "144.2.237.0/29"
               ],
               "destinationAddressPrefix": "*",
