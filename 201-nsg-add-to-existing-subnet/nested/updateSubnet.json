@@ -13,6 +13,9 @@
     },
     "nsgId": {
       "type": "string"
+    },
+    "nsgLocation": {
+      "type": "string"
     }
   },
   "variables": {},
@@ -21,7 +24,7 @@
       "apiVersion": "2018-03-01",
       "type": "Microsoft.Network/virtualNetworks/subnets",
       "name": "[concat(parameters('virtualNetworkName'), '/', parameters('subnetName'))]",
-      "location": "[resourceGroup().location]",
+      "location": "[parameters('nsgLocation')]",
       "properties": {
         "addressPrefix": "[parameters('subnetAddressPrefix')]",
         "networkSecurityGroup": {
