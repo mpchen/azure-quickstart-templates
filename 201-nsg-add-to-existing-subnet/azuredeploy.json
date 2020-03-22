@@ -109,6 +109,9 @@
           },
           "nsgId": {
             "value": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworkName'),'-',parameters('subnetName'),'-','hsec-nsg'))]"
+          },
+          "nsgLocation": {
+            "value": "[reference(resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('virtualNetworkName'),'-',parameters('subnetName'),'-','hsec-nsg'))).location]"
           }
         }
       }
